@@ -26,6 +26,14 @@ public:
     
     std::string toString() const;
 
+    std::vector<TokenType> getTokenTypes() {
+        std::vector<TokenType> tokenTypes;
+        for (size_t i = 0; i < tokens.size(); i++) {
+            tokenTypes[i] = tokens[i]->getTokenType();
+        }
+        return tokenTypes;
+    }
+
 };
 
 #endif // LEXER_H

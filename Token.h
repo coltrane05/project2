@@ -36,7 +36,15 @@ public:
 
     std::string toString() const;
 
-    // TODO: add other needed methods
+    TokenType getTokenType() {
+        return myTokenType;
+    }
+    std::string getDescription() {
+        return myDescription;
+    }
+    int getLineNumber() {
+        return lineNumber();
+    }
 };
 
 #endif // TOKEN_H
